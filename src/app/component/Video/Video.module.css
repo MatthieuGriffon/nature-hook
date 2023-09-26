@@ -1,0 +1,22 @@
+.video {
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+    margin: auto;
+    object-fit: cover;
+    width: 90%;
+    border-radius: 7%;
+    border: 2px solid coral;
+ }
+ @media (min-width: 768px) {
+    .video {
+        width: 50%;
+        margin-left: 8rem;
+    }
+}
+@media (min-width: 1440px) {
+    .video {
+        width: 45%;
+    }
+}
+ 

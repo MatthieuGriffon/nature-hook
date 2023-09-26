@@ -1,0 +1,38 @@
+.header {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 4%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  align-items: center;
+}    
+
+.logoContainer {
+    position:absolute;
+    top: 10%;
+    left: 35%;
+    z-index: 1;
+}
+.responsiveLogo {
+    animation: growLogo 1s ease-out;
+}
+@keyframes growLogo {
+    from {
+      transform: scale(0.2);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  @media (min-width: 768px) {
+    .header {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+    }
+}

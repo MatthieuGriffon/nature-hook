@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: coral ;
+}
+.text {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: justify;
+}
+.link {
+    text-decoration: none;
+    margin: 0.2%;
+    display: block;
+    color: coral;
+    padding: 0.2rem 0.2rem;
+    background-color: #0f1923;
+    overflow: hidden;
+    position: relative;
+    transition: all .2s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+    z-index: 1;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgb(3,117,117);
+    transition: width .6s ease;
+    z-index: -1;
+    transform: skewX(-45deg);  /* incliner le pseudo-élément de 45 degrés */
+    transform-origin: 0 0% 0 50%; 
+}
+.link:hover::before {
+    width: 120%;
+}
